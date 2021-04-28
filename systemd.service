@@ -1,0 +1,12 @@
+[Unit]
+Description=Todo Service
+
+[Service]
+User=todo
+Environment=ZIPKIN_URL=http://zipkinendpoint:9411/zipkin/
+Environment=REDIS_HOST=REDIS_ENDPOINT
+ExecStart=/bin/node /home/todo/todo/server.js
+SyslogIdentifier=todo
+
+[Install]
+WantedBy=multi-user.target
