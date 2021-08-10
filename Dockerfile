@@ -1,6 +1,6 @@
 FROM        node
 RUN         mkdir /app
 WORKDIR     /app
-COPY        . ..
+COPY        . .
 RUN         npm install
 CMD         [ "node", "server.js" ]
